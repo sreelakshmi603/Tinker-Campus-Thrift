@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy sell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7; /* Set a light background color */
+        }
+
+        header {
+            background-color: #333; /* Set a red background color for the header */
+            padding: 50px;
+            text-align: left;
+            color: #fff; /* Set white color for the header text */
+            width: 100%; /* Make the header span the full width of the screen */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+
+        .heading {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 50px 100px;
+            font-size: 64px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            border: 5px solid #333;
+            color: #333;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #fff; /* Set a red background color for the footer */
+            padding: 10px;
+            text-align: center;
+            color: #fff; /* Set white color for the footer text */
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1 class="heading">You are here to</h1>
+</header>
+
+<div class="button-container">
+    <!-- Form for buying items -->
+    <form action="display_items.php" method="post">
+        <button class="button" type="submit" name="action" value="buy">Buy</button>
+    </form>
+
+    <!-- Form for selling items -->
+    <form action="seller_page.php" method="post">
+        <button class="button" type="submit" name="action" value="sell">Sell</button>
+    </form>
+</div>
+
+<footer>
+    This is the footer content.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Thrift</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add CSS styles for the description */
+        #about-description {
+            display: none; /* Hide the description by default */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campus Thrift</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="about-link">About</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Login form -->
+        <section id="login-container"> <!-- Updated ID to match CSS -->
+            <h2>Login</h2>
+            <form action="login.php" method="post" id="login-form">
+                <div class="form-group">
+                    <label for="ber">Admission Number:</label>
+                    <input type="text" id="admission-number" name="admis_no" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <!-- Change type to submit to trigger form submission -->
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="about-description">
+            <h4>Welcome to Campus Thrift! We are dedicated to providing a platform for buying and selling items within the campus community. Our goal is to facilitate easy transactions and promote sustainability by giving items a second life.</h4>
+            <p>Welcome to Campus Thrift! We are dedicated to providing a platform for buying and selling items within the campus community. Our goal is to facilitate easy transactions and promote sustainability by giving items a second life.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Thrift</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <script>
+        // JavaScript code to toggle the visibility of the about description
+        document.getElementById('about-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.getElementById('about-description').style.display = 'block'; // Display the description
+        });
+        
+        // JavaScript code to hide the description when clicking anywhere on the page
+        document.addEventListener('click', function(event) {
+    if (!event.target.closest('#about-description') && event.target.id !== 'about-link') {
+        document.getElementById('about-description').style.display = 'none'; // Hide the description
+    }
+    });
+    </script>
+</body>
+</html>
